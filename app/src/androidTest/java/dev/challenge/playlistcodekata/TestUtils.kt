@@ -22,7 +22,7 @@ fun generateManyTracks() = (1..300).map { Track(title = "Random$it", duration = 
 //Can be more than 200
 //TrackId is ever present as the passed list of tracks are from the db
 fun generateManyPlayListEntries(userId: Int, tracks: List<Track>) =
-    (tracks.indices).map { index ->
+    tracks.indices.map { index ->
         PlayListEntry(
             userId = userId,
             trackId = tracks[index].trackId!!

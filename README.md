@@ -60,6 +60,6 @@ Libraries used in the whole application are:
 
 - [Jetpack](https://developer.android.com/jetpack)🚀
   - [Viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI related data in a lifecycle conscious way 
- - [Room](https://developer.android.com/training/data-storage/room) - Provides abstraction layer over SQLitesources
+ - [Room](https://developer.android.com/training/data-storage/room) - Provides abstraction layer over SQLite
 - [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines
 -  [Dagger2](https://dagger.dev/dev-guide/) - Used for Dependency injection

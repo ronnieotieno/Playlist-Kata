@@ -22,7 +22,6 @@ import dev.challenge.playlistcodekata.data.entities.User
 )
 abstract class PlayListDataBase : RoomDatabase() {
 
-
     abstract val playListDao: PlayListDao
 
     //Room should only be initiated once, marked volatile to be thread safe.
