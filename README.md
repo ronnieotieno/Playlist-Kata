@@ -27,6 +27,7 @@ In our case the the tracks can be part of many playslist and playlist may contai
 
 It has to have two ids, that of the user plus that of the track. These two combined act as primary key under the hood. Then define a relationship(The playList)  with UserId and TrackId as parent  and child column respectively and associate by junction(PlayListEntry) entity. This return the User and the list of tracks. Query the User table where userId matches the provided id and limit to 1 and return a single playList - which contains the user and the list of tracks in the playlist.
 
+```kotlin
     // The entry
            @Entity(primaryKeys = ["userId", "trackId"], tableName =     "play_list_table")  
                  data class PlayListEntry(  
@@ -45,6 +46,7 @@ It has to have two ids, that of the user plus that of the track. These two combi
     )  
     val tracks: List<Track>  
     )
+```
 
 This can be achieved with raw sqlite too but since the project uses the jetpack components, Room proved to be the nice one to use.
 
