@@ -9,7 +9,6 @@ import dev.challenge.playlistcodekata.data.entities.User
 
 /**
  *[PlayList] comes from the relation between [Track] and [User] as indicated in [PlayListEntry] entity/table
- *
  * [tracks] is a list of [Track] associated with the [User] in the [PlayListEntry]
  */
 

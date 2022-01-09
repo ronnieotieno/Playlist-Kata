@@ -31,7 +31,7 @@ class MainViewModelTest {
 
     //get Activity and make the viewmodel
     @Before
-    fun setUp() = runBlocking {
+    fun setUp() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
 
         //create a "disposable" database
