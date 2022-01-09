@@ -29,23 +29,22 @@ It has to have two ids, that of the user plus that of the track. These two combi
 
 ```kotlin
     // The entry
-           @Entity(primaryKeys = ["userId", "trackId"], tableName =     "play_list_table")  
-                 data class PlayListEntry(  
-                val userId: Int,  
-                val trackId: Int  
-            )
-            
-    //The playlist relation
-    
-    data class PlayList(
-     @Embedded val user: User,  
-     @Relation(  
-        parentColumn = "userId",  
-     entityColumn = "trackId",  
-     associateBy = Junction(PlayListEntry::class)  
-    )  
-    val tracks: List<Track>  
+  @Entity(primaryKeys = ["userId", "trackId"], tableName = "play_list_table")
+  data class PlayListEntry(
+    val userId: Int,
+    val trackId: Int
+  )
+
+  //The playlist relation
+  data class PlayList(
+    @Embedded val user: User,
+    @Relation(
+      parentColumn = "userId",
+      entityColumn = "trackId",
+      associateBy = Junction(PlayListEntry::class)
     )
+    val tracks: List<Track>
+  )
 ```
 
 This can be achieved with raw sqlite too but since the project uses the jetpack components, Room proved to be the nice one to use.
