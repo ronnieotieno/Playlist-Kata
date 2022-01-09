@@ -1,5 +1,5 @@
 
-# SoundCloud Kata
+# Playlist
 
 An Android project creating, altering and displaying users playlist built with MVVM pattern as well as Architecture Components.
 
